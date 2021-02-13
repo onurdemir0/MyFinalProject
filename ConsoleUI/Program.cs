@@ -29,7 +29,7 @@ namespace ConsoleUI
 		{
 			ProductManager productManager = new ProductManager(new EfProductDal());
 			var result = productManager.GetProductDetails();
-			if (result.Success)
+			if (result.Success==true)
 			{
 				foreach (var product in result.Data)
 				{
@@ -37,7 +37,7 @@ namespace ConsoleUI
 				}
 			}
 			else
-			{
+			{	
 				Console.WriteLine(result.Message);
 			}
 		}
